@@ -10,6 +10,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import Transport from './components/Transport/Transport';
 
 function App() {
   const navStyle = {
@@ -55,8 +56,11 @@ function App() {
           <Route path="/login">
             <Login />
           </Route>
-          <Route path="/">
+          <Route exact path="/">
             <Home />
+          </Route>
+          <Route path="/transport/">
+              <Transport />
           </Route>
       </Switch>
     </Router>

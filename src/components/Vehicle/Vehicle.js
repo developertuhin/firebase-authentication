@@ -1,4 +1,5 @@
 import React from 'react';
+import { useHistory } from 'react-router';
 
 const Vehicle = (props) => {
     console.log(props);
@@ -11,8 +12,10 @@ const Vehicle = (props) => {
         backgroundColor:'#ffff',
        
     }
+    const history = useHistory()
     const handleVehicle =()=>{
         console.log("Clicked vehicle");
+        history.push("/transport")
     }
     return (
         <div onClick={handleVehicle} style={style} className="col-md-2 col-sm-12">
